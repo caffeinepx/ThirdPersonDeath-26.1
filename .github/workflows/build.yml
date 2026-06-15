@@ -33,6 +33,9 @@ jobs:
           # Only write cache on main/master to save cache space on PRs
           cache-read-only: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/master' }}
 
+      - name: Make Gradle wrapper executable
+        run: chmod +x ./gradlew
+
       - name: Determine version
         id: vars
         shell: bash
