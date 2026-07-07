@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Minecraft.class)
 public class tpdminecraft {
 
-    @Inject(method = "setScreen", at = @At("TAIL"))
+    @Inject(method = "setScreenAndShow", at = @At("TAIL"))
     private void onSetScreen(Screen screen, CallbackInfo ci) {
         ThirdPersonDeath.detectscreen();
     }

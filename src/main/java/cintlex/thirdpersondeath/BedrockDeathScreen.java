@@ -68,7 +68,7 @@ public class BedrockDeathScreen extends Screen {
             this.minecraft.level.disconnect(ClientLevel.DEFAULT_QUIT_MESSAGE);
         }
         this.minecraft.disconnectWithSavingScreen();
-        this.minecraft.setScreen(new TitleScreen());
+        this.minecraft.setScreenAndShow(new TitleScreen());
     }
 
     @Override

@@ -37,7 +37,7 @@ public class tpdclientpacketlistener {
             }
             final var deathMessage = packet.message();
             final boolean isHardcore = hardcore;
-            client.execute(() -> client.setScreen(new BedrockDeathScreen(deathMessage, isHardcore)));
+            client.execute(() -> client.setScreenAndShow(new BedrockDeathScreen(deathMessage, isHardcore)));
             ci.cancel();
         }
     }

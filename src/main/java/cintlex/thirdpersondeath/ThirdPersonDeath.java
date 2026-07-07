@@ -10,7 +10,7 @@ public class ThirdPersonDeath implements ClientModInitializer {
 	private static boolean deathscreen = false; private static CameraType playerperspective = null; private static long DeathTime = 0; private static boolean zoom = false;
 	@Override
 	public void onInitializeClient() {}
-	public static void detectscreen() {Minecraft client = Minecraft.getInstance(); if (isDeathScreen(client.screen)) {if (!deathscreen) {screenisdeath(client);}
+	public static void detectscreen() {Minecraft client = Minecraft.getInstance(); if (isDeathScreen(client.gui.screen())) {if (!deathscreen) {screenisdeath(client);}
 		deathscreen = true;
 	} else {if (deathscreen) {screenisnotdeath(client);}
 		deathscreen = false;
